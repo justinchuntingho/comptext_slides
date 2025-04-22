@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title></title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/scipo.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<div class="withbg">
+					<h4 style ="color:#333">COMPTEXT 2025</h4>
+					<h3 style ="color:#E6142D">Multiverse Analysis of Linguistic and Contextual Bias in Large Language Models</h3>
+					<h4 style ="color:#333">Justin Chun-ting Ho <br><small>University of Amsterdam</small></h4>
+					<h4 style ="color:#333">Chung-hong Chan <br><small>GESIS - Leibniz Institute for the Social Sciences</small></h4>
+				</div>
+				</section>
+				<section>
+					<em>"Many resources, tools and experiences ... are available only, or in far better quality, for English-language text" </em><br><br>
+					<small>(Baden et al., 2022)</small>
+				</section>
+				<section>
+				<section>
+					<h4>Indo-European Languages</h4>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Indo-European-speaking_world.png" width="100%" style="background:none; border:none; box-shadow:none;"><br>
+				</section>
+				<section>
+					<h4>Democracy Index</h4>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Democracy_Index_2020.svg/1280px-Democracy_Index_2020.svg.png" width="100%" style="background:none; border:none; box-shadow:none;"><br>
+				</section>
+				<section>
+					<h4>GDP per Capita</h4>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Map_of_countries_by_GDP_%28nominal%29_per_capita_in_2023.svg/1024px-Map_of_countries_by_GDP_%28nominal%29_per_capita_in_2023.svg.png" width="100%" style="background:none; border:none; box-shadow:none;"><br>
+				</section>
+				</section>
+				<section data-background-size="50%" data-background="ccr.png">
+				<div class="fragment" style="background-color:rgba(235,235,235,0.9);">
+					<ul>
+						<li>Texts encode both linguistic and societal information</li>
+						<li class="fragment">They can affect the performance of language models</li>
+						<li class="fragment" >Linguistic bias: <br><small>Discrepancy in performance across languages</small></li>
+						<li class="fragment" >Contextual bias: <br><small>Discrepancy in performance across materials produced in different social contexts</small></li>
+					</ul>
+				</div>
+				</section>
+				<section>
+				<section>
+					<h3>What about ChatGPT? <br>(and other Large Langage Models)</h3>
+				</section>
+								<section>
+					<h3>How Multilingual are multilingual LLMs?</h3>
+					<p><ul>
+						<li>65 out of the 95 languages supported by ChatGPT are Indo-European languages</li>
+						<li>Most texts in Red Pajama 2 are English: 14.5 billion out of 20.8 billion. All are Indo-European languages</li>
+						<li>Over 40% documents of Common Crawl are English</li>
+					</ul></p>
+				</section>
+				</section>
+				<section>
+					<section>
+						<h3>Methodology</h3>
+						<ul>
+							<li>Data: Parliamentary texts from UK, Basque, HK, Taiwan</li>
+							<li>Task: "What is the policy area of the following text according to Comparative Agendas Project?"</li>
+							<li>Synthetic data pairs to test the effect of linguistic and contextual similarity</li>
+						</ul>
+					</section>
+					<section>
+						You are an assistant for analyzing classify texts based on the coding scheme of the Comparative Agendas Project. Answer with one of the following topic labels: {Topic Labels}
+					</section>
+					<section>
+						What is the policy area of the text: {text}
+					</section>
+				</section>
+					<section>
+						<h3>Synthetic Data Pairs</h3>
+						<table>
+							<thead>
+								<tr>
+									<td></td>
+									<td><b>High LS <br><small>(Indo-European)</small></b></td>
+									<td><b>Low LS <br><small>(Non-Indo-European)</small></b></td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><b>High CS <br><small>(European)</small></b></td>
+									<td><span>UK (English)</span>, <br><span style="color:blue;">Basque (English)</span></td>
+									<td><span style="color:blue;">UK (Chinese)</span>, <br><span>Basque (Basque)</span></td>
+								</tr>
+								<tr>
+									<td><b>Low CS <br><small>(Non-European)</small></b></td>
+									<td><span>HK (English)</span>, <br><span style="color:blue;">Taiwan (English)</span></td>
+									<td><span>HK (Chinese)</span>, <br><span>Taiwan (Chinese)</span></td>
+								</tr>
+							</tbody>
+						</table>
+						<p><small>Note: LS = Linguistic similarity with English; <br>CS = Contextual similarity with UK/US</small></p>
+					</section>
+				<section>
+					<img src="chatgptfunction.png" width="90%" style="background:none; border:none; box-shadow:none;">
+				</section>			
+				<section data-background="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3M5ZXBwa3FnNHE0ZW9jbGt3Z2cxOGtzbzYyZzlvenIxejVwY3Y4ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6MkTRV43vCOiaxP2M2/giphy.gif">
+					<div style="background-color:rgba(255,255,255,0.7);">
+					<h2>Multiverse Analysis</h2>
+					</div>
+				</section>
+				<section>
+					<h3>why Multiverse Analysis?</h3>
+					<img src="00reportingstrategies.png" width="100%" style="background:none; border:none; box-shadow:none;">
+					<small>(Source: Sarma A et al. (2021). “multiverse: Multiplexing Alternative Data Analyses in R Notebooks (Version 0.6.1).” OSF Preprints. https://github.com/MUCollective/multiverse.)</small>
+				</section>					
+					<section>
+						<h3>Multiverse Analysis</h3>
+						<small>
+							<table><thead>
+								<tr>
+									<th>Multiverse elements</th>
+									<th>Options</th>
+									<th>n options</th>
+								</tr></thead>
+								<tbody>
+									<tr>
+										<td>LLM Model (Size)</td>
+										<td><ul>
+											<li>gpt-35-turbo</li>
+											<li>gpt-4</li>
+											<li>gpt-4-turbo</li>
+											<li>gpt-4o</li>
+											<li>gpt-4o-mini</li>
+											<li>gemini-1.0-pro</li>
+											<li>gemini-1.5-pro</li>
+											<li>Llama-3.1-8b-instruct</li>
+											<li>Llama-3.1-70b-instruct</li>
+											<li>Llama-3.3-70B-Instruct</li>
+											<li>Ministral-3B</li>
+											<li>Mistral-Large-2411</li>
+											<li>Mistral-Nemo</li>
+											<li>qwen2.5:14b</li>
+											<li>qwen2.5:7b</li>
+											<li>deepseek-v2:16b</li>
+											<li>falcon:7b</li>
+											<li>falcon:40b</li>
+											</ul></td>
+										<td>18</td>
+									</tr>
+									<tr>
+										<td>Temperature</td>
+										<td>0, 1</td>
+										<td>2</td>
+									</tr>
+									<tr>
+										<td>Setup</td>
+										<td>Zero-shot, One-shot, Three-shot, Five-shot</td>
+										<td>4</td>
+									</tr>
+									<tr>
+									</tr>
+								</tbody>
+							</table>
+						</small>
+					</section>
+					<section>
+					<h4>Specification Curve</h4>
+					<img src="spec_curve.png" width="50%" style="background:none; border:none; box-shadow:none;">
+				</section>
+				<section>
+					<h3>What is the best performing combination of options</h3>
+				</section>
+				<section>
+				<section>
+					<h4>Multiverses</h4>
+					<img src="acc_allparam.png" width="30%" style="background:none; border:none; box-shadow:none;">
+				</section>
+				<section data-background-iframe="acc_all.html">
+				</section>
+				</section>
+				<section>
+					<h3>Do Linguistic and Contextual Biases exist?</h3>
+				</section>
+				<section>
+				<section>
+					<h4>Case Type</h4>
+					<img src="acc_typo.png" width="90%" style="background:none; border:none; box-shadow:none;">
+				</section>
+				<section>
+					<h4>Case Type</h4>
+					<img src="acc_typo_ridges.png" width="70%" style="background:none; border:none; box-shadow:none;">
+				</section>
+				<section>
+					<h4>Language</h4>
+					<img src="acc_lang.png" width="60%" style="background:none; border:none; box-shadow:none;">
+				</section>
+				</section>
+				<section>
+					<h2>Does model family matter?</h2>
+				</section>
+				<section>
+					<h4>Case Type by Model</h4>
+					<img src="acc_typo_model_stable.png" width="90%" style="background:none; border:none; box-shadow:none;">
+				</section>
+
+				<section>
+					<h2>More about Regional LLM</h2>
+				</section>
+				<section>
+				<section>
+					<h4>Regional LLM</h4>
+					<img src="acc_langxcontext.png" width="60%" style="background:none; border:none; box-shadow:none;">
+				</section>
+				<section>
+					<h2>Does Example Help?</h2>
+				</section>
+				<section>
+					<h4>N-Shot</h4>
+					<img src="acc_shot.png" width="90%" style="background:none; border:none; box-shadow:none;">
+				</section>
+				<section>
+					<h2>Is bigger always better?</h2>
+				</section>
+				<section>
+					<h4>Size</h4>
+					<img src="acc_size.png" width="50%" style="background:none; border:none; box-shadow:none;">
+				</section>
+				<section>
+					<h2>What about temperature?</h2>
+				</section>
+				<section>
+					<h4>Temperature</h4>
+					<img src="acc_temp.png" width="50%" style="background:none; border:none; box-shadow:none;">
+				</section>
+			</section>
+				<section>
+					<h3>Takeaways</h3>
+					<p><ul>
+						<li>Language matters</li>
+						<li>Context matters</li>
+						<li>Models err in (more or less) the same way</li>
+						<li>But they also behave very differently</li>
+
+						<li>Choose your model wisely</li>
+					</ul></p>
+				</section>
+				<section>
+					<h2>Thank You!</h2>
+					<h4>Bluesky: @justinho.bsky.social<br>Github: justinchuntingho<br>Email: j.c.ho@uva.nl<br>Website: <a href="https://justinchuntingho.github.io/">justinchuntingho.github.io</a></h4>
+				</section>
+				</div>
+			</div>
+
+			<script src="dist/reveal.js"></script>
+			<script src="plugin/notes/notes.js"></script>
+			<script src="plugin/markdown/markdown.js"></script>
+			<script src="plugin/highlight/highlight.js"></script>
+			<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+				Reveal.initialize({
+					hash: true,
+					slideNumber: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+					plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				});
+			</script>
+		</body>
+		</html>
